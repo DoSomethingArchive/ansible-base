@@ -1,2 +1,8 @@
 ---
-# tasks file for ds-base
+
+- name: Update software packages
+  hosts: all
+  sudo: True
+  tasks:
+    - name: update apt
+      apt: update_cache=yes cache_valid_time=3600
