@@ -1,7 +1,6 @@
 ---
 
 - name: Update software packages
-  hosts: all
   sudo: True
   tasks:
     - name: update apt
