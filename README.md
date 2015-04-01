@@ -6,18 +6,23 @@ DoSomething.org base server.
 Role Variables
 --------------
 
-System timezone. To see the full list of timezones, run `timedatectl list-timezones`
+#### System timezone
+
+To see the full list of timezones, run `timedatectl list-timezones`.
 ```yml
 timezone: America/New_York
 ```
 
-System locale.  To see the full locales list of installed locales, run `locale -a`
+####  System locale
+
+To see the full locales list of installed locales, run `locale -a`.
 ```yml
 locale: en_US.UTF-8
 ```
 
-Override NTP servers.
+#### Override NTP servers
 For example, here's configuration from [amazon NTP servers](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/set-time.html):
+
 ```yml
 ntp_servers:
  - 0.amazon.pool.ntp.org iburst
@@ -31,9 +36,9 @@ If not specified, ntp package defaults will be used.
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Usage example:
 
-```
+```yml
 - hosts: servers
   roles:
      - { role: dosomething.base, timezone: 'America/Los_Angeles' }
