@@ -29,5 +29,5 @@
   sudo: yes
   sysctl: >
     name="vm.swappiness"
-    value=0
+    value=1
     sysctl_set=yes
